@@ -1,0 +1,150 @@
+@font-face {
+    font-family: groovy;
+    src: url(fonts/balanced-groovy.ttf);
+}
+:root {
+    --blue: hsl(216, 81%, 59%);
+    --light-white: hsl(0, 0%, 95%);
+    --white: hsl(0, 2%, 80%);
+}
+*,
+* ::before,
+* ::after {
+    box-sizing: border-box;
+    margin: 0;
+    text-decoration: none;
+    font-family: groovy;
+    
+}
+.container {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template: 200px 1fr / 250px 1fr;
+}
+/* Header */
+.header {
+    background-color: var(--light-white);
+    grid-area: 1 / 2 / 2 / 3;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+}
+.searchbar {
+    display: flex;
+    align-items: center;
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.searchbar input {
+    width: 80%;
+    height: 2rem;
+    border-radius: 15px;
+    border-style: none;
+    background-color: var(--white);
+}
+.searchbar button {
+    background-color: transparent;
+    border-style: none;
+}
+
+.profile-menu {
+    grid-area: 1 / 3 / 2 / 4;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-self: end;
+    margin-right: 4rem;
+}
+.profile-picture{
+    border-radius: 50%;
+    height: 2.5rem;
+}
+.profile-picture.big {
+    height: 4rem;
+}
+
+.welcome {
+    grid-area: 2 / 1 / 2 / 2;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 3fr;
+    align-self: center;
+}
+.welcome img {
+    grid-area: 1 / 1 / 3 / 2;
+    justify-self: center;
+    align-self: center;
+}
+.welcome div {
+    align-self: end;
+}
+.welcome h1 {
+    font-weight: 400;
+}
+
+.upload {
+    grid-area: 2 / 3 / 3 / 4;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    gap: 2rem;
+    padding-right: 4rem;
+}
+.upload button {
+    height: 3rem;
+    width: 9rem;
+    border-radius: 25px;
+    background-color: var(--blue);
+    border-style: none;
+    color: var(--light-white);
+}
+/* Sidebar */
+.sidebar {
+    background-color: var(--blue);
+    grid-area: 1 / 1 / 3 / 2;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: .8rem;
+    gap: 10px;
+}
+.title > h1 {
+    font-family: groovy;
+    font-size: 2rem;
+    color: var(--light-white);
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: .5rem;
+    margin: 2rem 1rem;
+    justify-content: start;
+    align-items: start;
+}
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+.menu div, .menu img {
+    color: var(--light-white);
+    font-size: 1.25rem;
+    font-family: groovy;
+}
+.icon {
+    height: 1.5rem;
+}
+
+/* Main */
+.main-content {
+    background-color: var(--white);
+}
+
